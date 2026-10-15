@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Devweekerson",
+    "account": {"id": 1, "number": "01.097954-4", "agency": "2030", "balance": 624.12, "limit": 1000.0},
+    "card": {"id": 1, "number": "xxxx xxxx xxxx 1111", "limit": 2000.0},
+    "features": [
+      {"id": 1, "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/pix.svg", "description": "PIX"},
+      {"id": 2, "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/pay.svg", "description": "Pagar"}
+    ],
+    "news": []
+  },
+  {
+    "id": 2,
+    "name": "Maria Souza",
+    "account": {"id": 2, "number": "02.123456-7", "agency": "2030", "balance": 2500.0, "limit": 1000.0},
+    "card": {"id": 2, "number": "xxxx xxxx xxxx 2222", "limit": 3000.0},
+    "features": [
+      {"id": 1, "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/pix.svg", "description": "PIX"},
+      {"id": 2, "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/pay.svg", "description": "Pagar"}
+    ],
+    "news": []
+  },
+  {
+    "id": 3,
+    "name": "Carlos Lima",
+    "account": {"id": 3, "number": "03.654321-0", "agency": "2030", "balance": 800.0, "limit": 500.0},
+    "card": {"id": 3, "number": "xxxx xxxx xxxx 3333", "limit": 1500.0},
+    "features": [
+      {"id": 1, "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/pix.svg", "description": "PIX"},
+      {"id": 2, "icon": "https://digitalinnovationone.github.io/santander-dev-week-2023-api/icons/pay.svg", "description": "Pagar"}
+    ],
+    "news": []
+  }
+]
