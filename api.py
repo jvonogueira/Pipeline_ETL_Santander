@@ -84,3 +84,23 @@ def adicionar_noticia(user_id: int, noticia: Noticia):
         lista = json.loads(row["news"]) + [noticia.model_dump()]
         con.execute("UPDATE users SET news = ? WHERE id = ?", (json.dumps(lista), user_id))
     return {"id": user_id, "news": lista}
+
+class NoticiaPut(BaseModel):
+    icon: str | None = None
+    description: str
+
+
+class UsuarioPut(BaseModel):
+    news: list[NoticiaPut]
+
+
+@app.put("/users/{user_id}")
+def atualizar_usuario(user_id: int, dados: UsuarioPut):
+    with conectar() as con:
+        row = con.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()
+        if row is None:
+            raise HTTPException(status_code=404, detail="Usuário não encontrado.")
+        news = [n.model_dump() for n in dados.news]
+        con.execute("UPDATE users SET news = ? WHERE id = ?", (json.dumps(news), user_id))
+        row = con.execute("SELECT * FROM users WHERE id = ?", (user_id,)).fetchone()
+    return para_dict(row)
